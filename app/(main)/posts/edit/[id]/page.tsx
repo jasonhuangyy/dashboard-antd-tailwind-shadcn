@@ -40,6 +40,8 @@ const config = {
 };
 
 const PostEditPage = ({ params }: PostEditPageProps) => {
+  const post = posts.find((post) => post.id === params.id);
+  const { toast } = useToast();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onFinish = (fieldsValue: any) => {
     const values = {
@@ -52,9 +54,6 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
     });
     console.log("Received values of form: ", values);
   };
-
-  const post = posts.find((post) => post.id === params.id);
-  const { toast } = useToast();
 
   return (
     <>
@@ -71,7 +70,7 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
             // style={{ maxWidth: 600 }}
             initialValues={{
               ...post,
-              date: dayjs(post.date, "YYYY-MM-DD"),
+              date: dayjs(post?.date, "YYYY-MM-DD"),
             }}
           >
             <FormItem<TFormSchema>
@@ -98,7 +97,7 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
             </FormItem>
             <FormItem name="date" label="日期" {...config}>
               <DatePicker
-                value={dayjs(post.date, "YYYY-MM-DD")}
+                value={dayjs(post?.date, "YYYY-MM-DD")}
                 className="w-full"
               />
             </FormItem>

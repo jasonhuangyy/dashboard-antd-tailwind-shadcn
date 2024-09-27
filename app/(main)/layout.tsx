@@ -19,11 +19,11 @@ export default function MainLayout({
   return (
     <>
       <NavBar></NavBar>
-      <div className="flex">
+      <div className="flex  ">
         <div className="hidden bg-se md:block h-[calc(100vh-4.5rem)] w-[20rem] px-4">
           <SideBar />
         </div>
-        <div className="container max-w-[1200px] p-5 ">
+        <div className="container max-w-[1200px] p-5">
           <ConfigProvider
             locale={locale}
             theme={theme === "light" ? antLightTheme : antDarkTheme}

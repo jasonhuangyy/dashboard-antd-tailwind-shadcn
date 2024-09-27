@@ -22,7 +22,7 @@ import {
 
 const AnalyticsChart = () => {
   return (
-    <Card>
+    <Card className="bg-slate-50 dark:bg-slate-800">
       <CardHeader>
         <CardTitle>Analytics For This Year</CardTitle>
         <CardDescription>View Per Month</CardDescription>

@@ -34,7 +34,7 @@ const PostTable = ({ title, limit, pagenation }: PostTableProps) => {
   return (
     <>
       {/* <h3 className="text-2xl mb-4 font-semibold">{title ? title : "Posts"}</h3> */}
-      <Card>
+      <Card className="bg-slate-50 dark:bg-slate-800">
         <CardHeader>
           <CardTitle>{title ? title : "Posts"}</CardTitle>
           <CardDescription>

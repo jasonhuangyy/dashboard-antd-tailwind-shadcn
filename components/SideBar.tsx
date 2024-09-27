@@ -23,7 +23,7 @@ const SideBar = () => {
   const itemClass = "mr-4 h-4 w-4";
   return (
     <>
-      <Command>
+      <Command className="w-full">
         <CommandInput placeholder="查询菜单" />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
